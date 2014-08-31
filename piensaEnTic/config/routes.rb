@@ -1,4 +1,8 @@
 PiensaEnTic::Application.routes.draw do
+  resources :entradas
+
+  get '/submit' =>'entradas#new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

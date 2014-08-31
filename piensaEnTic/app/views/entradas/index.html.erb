@@ -1,0 +1,39 @@
+<h1>Listing entradas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Email</th>
+      <th>Colegio</th>
+      <th>Nivel</th>
+      <th>Ciudad</th>
+      <th>Link video</th>
+      <th>Link bloopers</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @entradas.each do |entrada| %>
+      <tr>
+        <td><%= entrada.nombre %></td>
+        <td><%= entrada.email %></td>
+        <td><%= entrada.colegio %></td>
+        <td><%= entrada.nivel %></td>
+        <td><%= entrada.ciudad %></td>
+        <td><%= entrada.link_video %></td>
+        <td><%= entrada.link_bloopers %></td>
+        <td><%= link_to 'Show', entrada %></td>
+        <td><%= link_to 'Edit', edit_entrada_path(entrada) %></td>
+        <td><%= link_to 'Destroy', entrada, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Entrada', new_entrada_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @entrada.nombre %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @entrada.email %>
+</p>
+
+<p>
+  <strong>Colegio:</strong>
+  <%= @entrada.colegio %>
+</p>
+
+<p>
+  <strong>Nivel:</strong>
+  <%= @entrada.nivel %>
+</p>
+
+<p>
+  <strong>Ciudad:</strong>
+  <%= @entrada.ciudad %>
+</p>
+
+<p>
+  <strong>Link video:</strong>
+  <%= @entrada.link_video %>
+</p>
+
+<p>
+  <strong>Link bloopers:</strong>
+  <%= @entrada.link_bloopers %>
+</p>
+
+<%= link_to 'Edit', edit_entrada_path(@entrada) %> |
+<%= link_to 'Back', entradas_path %>
