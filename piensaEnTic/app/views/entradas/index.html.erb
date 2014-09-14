@@ -4,9 +4,7 @@
   <thead>
     <tr>
       <th>Nombre</th>
-      <th>Email</th>
       <th>Colegio</th>
-      <th>Nivel</th>
       <th>Ciudad</th>
       <th>Link video</th>
       <th>Link bloopers</th>
@@ -20,12 +18,18 @@
     <% @entradas.each do |entrada| %>
       <tr>
         <td><%= entrada.nombre %></td>
-        <td><%= entrada.email %></td>
         <td><%= entrada.colegio %></td>
-        <td><%= entrada.nivel %></td>
         <td><%= entrada.ciudad %></td>
-        <td><%= entrada.link_video %></td>
-        <td><%= entrada.link_bloopers %></td>
+        <% if entrada.link_video.include? "http://" or entrada.link_video.include? "https://" %>
+        <td><a href=<%= entrada.link_video %>>LINK</a></td>
+        <% else %>
+        <td>NO DISPONIBLE</td>
+        <% end %>
+        <% if entrada.link_bloopers.include? "http://" or entrada.link_bloopers.include? "https://" %>
+        <td><a href=<%= entrada.link_bloopers %>>LINK</a></td>
+        <% else %>
+        <td>NO DISPONIBLE</td>
+        <% end %>
         <!--<td><%= link_to 'Show', entrada %></td>
         <td><%= link_to 'Edit', edit_entrada_path(entrada) %></td>
         <td><%= link_to 'Destroy', entrada, method: :delete, data: { confirm: 'Are you sure?' } %></td>
