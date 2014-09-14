@@ -28,11 +28,11 @@ class EntradasController < ApplicationController
 
     respond_to do |format|
       if @entrada.save
-        format.html { redirect_to @entrada, notice: 'Entrada was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @entrada }
+        format.html { redirect_to :controller => 'home', :action =>'index', :notice => 'La entrada fue creada de manera exitosa.' }
+        #format.json { render action: 'show', status: :created, location: @entrada }
       else
-        format.html { render action: 'new' }
-        format.json { render json: @entrada.errors, status: :unprocessable_entity }
+        format.html { redirect_to :controller => 'home', :action =>'index', notice: 'La entrada no fue creada.' }
+        #format.json { render json: @entrada.errors, status: :unprocessable_entity }
       end
     end
   end
