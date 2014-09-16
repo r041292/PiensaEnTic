@@ -1,47 +1,39 @@
 <%= form_for(@entrada) do |f| %>
   <% if @entrada.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@entrada.errors.count, "error") %> prohibited this entrada from being saved:</h2>
+      <p class="copy-02"><%= pluralize(@entrada.errors.count, "error") %> prohibited this entrada from being saved:</p>
 
       <ul>
       <% @entrada.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <p class="copy-02"><li><%= msg %></li></p>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-<div style="color:#FFFFFF">
-  <div class="field">
-    <%= f.label :nombre %><br>
+<div class ="signup-form">
+
+    <p class="copy-02"><%= f.label :nombre %></p>
     <%= f.text_field :nombre %>
-  </div>
-  <div class="field" >
-    <%= f.label :email %><br>
+
+    <p class="copy-02"><%= f.label :email %></p>
     <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :colegio %><br>
+
+    <p class="copy-02"><%= f.label :colegio %></p>
     <%= f.text_field :colegio %>
-  </div>
-  <div class="field">
-    <%= f.label :nivel %><br>
+
+   <p class="copy-02"> <%= f.label :nivel %></p>
     <%= f.text_field :nivel %>
-  </div>
-  <div class="field">
-    <%= f.label :ciudad %><br>
+
+    <p class="copy-02"><%= f.label :ciudad %></p>
     <%= f.text_field :ciudad %>
-  </div>
-  <div class="field">
-    <%= f.label :link_video %><br>
+
+    <p class="copy-02"><%= f.label :link_video %></p>
     <%= f.text_field :link_video %>
-  </div>
-  <div class="field">
-    <%= f.label :link_bloopers %><br>
+
+    <p class="copy-02"><%= f.label :link_bloopers %></p>
     <%= f.text_field :link_bloopers %>
-  </div>
-  <div class="actions">
-    <%= f.submit :class =>"button main rounded" %>
-  </div>
+<p class="copy-02"><BR></p>
+    <%= f.submit "Enviar",:class =>"button main rounded" %>
 </div>
 <% end %>
