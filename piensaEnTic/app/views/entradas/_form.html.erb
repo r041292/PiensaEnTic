@@ -22,16 +22,16 @@
     <p class="copy-02"><%= f.label :colegio %></p>
     <%= f.text_field :colegio %>
 
-   <p class="copy-02"> <%= f.label :nivel %></p>
+   <p class="copy-02"> <%= f.label :nivel, 'Grado' %></p>
     <%= f.text_field :nivel %>
 
     <p class="copy-02"><%= f.label :ciudad %></p>
     <%= f.text_field :ciudad %>
 
-    <p class="copy-02"><%= f.label :link_video %></p>
+    <p class="copy-02"><%= f.label :link_video, 'Link del video' %></p>
     <%= f.text_field :link_video %>
 
-    <p class="copy-02"><%= f.label :link_bloopers %></p>
+    <p class="copy-02"><%= f.label :link_bloopers, 'Link de los bloopers (opcional)' %></p>
     <%= f.text_field :link_bloopers %>
 <p class="copy-02"><BR></p>
     <%= f.submit "Enviar",:class =>"button main rounded" %>
