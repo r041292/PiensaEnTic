@@ -17,12 +17,12 @@
 
 
 (function() {
-  var formSubscribe, loadApplication, photoSection, svgInjector, worksFilter;
+  var formSubscribe, loadApplication, photoSection, worksFilter;
 
   loadApplication = function() {
     var styles;
     styles = ["background: #7b77c9", "color: white", "display: block", "padding: 20px 20px 20px 20px", "text-align: center", "font-weight: normal", "font-size: 20px", "line-height: 60px"].join(";");
-    $(svgInjector);
+   
     $(worksFilter);
     $(photoSection);
     $(formSubscribe);
@@ -37,11 +37,7 @@
     }
   };
 
-  svgInjector = function() {
-    var mySVGsToInject;
-    mySVGsToInject = document.querySelectorAll('img.inject-me');
-    return SVGInjector(mySVGsToInject);
-  };
+ 
 
   worksFilter = function() {
     var $btns, $filter, $grid, $mobileFilterBtn, $sizer, $workItem;
